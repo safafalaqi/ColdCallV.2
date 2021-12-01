@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var array = ["Tiffany","Mike","Charles","Justin"]
+    @IBOutlet weak var name: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        name.text = array[Int.random(in: 0..<array.count)]
     }
 
 
+    @IBAction func changeRandomly(_ sender: Any) {
+        name.text = array[Int.random(in: 0..<array.count)]
+    }
 }
 
